@@ -3,10 +3,10 @@ Exercícios sobre os comandos de condição em python
 '''
 from datetime import date, datetime
 # pip3 install deep-translator
-from deep_translator import GoogleTranslator
+#from deep_translator import GoogleTranslator
 
 HOJE = datetime.now()
-tradutor = GoogleTranslator(source='en', target='pt')
+#tradutor = GoogleTranslator(source='en', target='pt')
 
 def exemplo_if_else():
     media = float(input('Média: '))
@@ -45,8 +45,20 @@ def q1():
 
 #3. Faça um programa que leia um número e imprima uma das duas mensagens:
 #   "É múltiplo de 3"ou "Não é múltiplo de 3".
+def q3():
+    numero = int(input("Digite um número: "))
+    if numero % 3 == 0:
+         print("É múltiplo de 3")
+    else:
+        print("Não é múltiplo de 3")
 
 #4. Faça um programa que leia um número e informe se ele é ou não divisível por 5.
+def q4():
+    numero = int(input("Digite um número: "))
+    if numero % 5 == 0:
+        print("O número é divisível por 5.")
+    else:
+        print("O número não é divisível por 5.")
 
 #5. Faça um programa que leia um número e informe se ele é divisível por 3 e por 7.
 def q5():
@@ -60,9 +72,17 @@ def q5():
 #   estatutários. O valor máximo da prestação não poderá ultrapassar 30% do salário
 #   bruto. Faça um programa que permita entrar com o salário bruto
 #   e o valor da prestação e informar se o empréstimo pode ou não ser concedido.
-
+def q6():
+    salario_bruto = float(input("Digite o salário bruto: "))
+    valor_prestacao = float(input("Digite o valor da prestação: "))
+    limite = (salario_bruto * 0.30)
+    if valor_prestacao <= limite:
+        print("Empréstimo pode ser concedido.")
+    else:
+        print("Empréstimo não pode ser concedido.")
 #7. Faça um programa que leia um número e indique se o número está compreendido
 #   entre 20 e 50 ou não.
+def q7():
 
 #8. Faça um programa que leia um número e imprima uma das mensagens:
 #   "Maior do que 20", "Igual a 20"ou "Menor do que 20".
